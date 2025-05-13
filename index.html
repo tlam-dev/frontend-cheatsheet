@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" data-theme: "light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Cheat Sheet</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+    <nav class="nav-bar">
+        <ul class="nav-list">
+            <li><a href="#html-section">HTML</a></li>
+            <li><a href="#css-section">CSS</a></li>
+            <li><a href="#js-section">Javascript</a></li>
+            <li><a href="#uxui-section">UXUI</a></li>
+            <button id="toggle-theme", class = "toggle-button", onmouseover = "this.innerText = hoverTheme()", onmouseout = "this.innerText = currentTheme()" onclick = "toggleTheme()">Theme</button>
+        </ul>
+    </nav>
+</head>
+<body>
+    <main>
+        <section id="html-section">
+            <h1>HTML Basics</h1>
+            <div id ="html-intro">
+                <code>
+                    &lt;!<span class="tag">DOCTYPE</span><span class="attr"> html</span>&gt;<br>
+                    &lt;<span class="tag">html</span> <span class="attr"">lang</span>="en" <span class="attr">data-theme:</span> "<script>currentThemeText()</script>"&gt;<br>
+                    &lt;<span class="tag">head</span>&gt;<br>
+                    &nbsp;&nbsp;&lt;<span class="tag">meta</span> <span class="attr">charset</span>="UTF-8"&gt;<br>
+                    &nbsp;&nbsp;&lt;<span class="tag">meta</span> <span class="attr">name</span>="viewport" <span class="attr">content</span>="width=device-width, initial-scale=1.0"&gt;<br>
+                    &nbsp;&nbsp;&lt;<span class="tag">title</span>&gt;Introduction to HTML&lt;/<span class="tag">title</span>&gt;<br>
+                    &lt;/<span class="tag">head</span>&gt;<br>
+                    &lt;<span class="tag">body</span>&gt;<br>
+                    &nbsp;&nbsp;&lt;<span class="tag">h1</span>&gt;Hello World&lt;/<span class="tag">h1</span>&gt;<br>
+                    &nbsp;&nbsp;&lt;<span class="tag">p</span>&gt;Begin exploring Hyper Text Markup Language...&lt;/<span class="tag">p</span>&gt;<br>
+
+                    &nbsp;&nbsp;&lt;/<span class="tag">body</span>&gt;<br>
+                    &lt;/<span class="tag">html</span>&gt;<br>
+                </code>
+            </div>
+            <h2>HTML Tags</h2>
+            <h3>HTML Structure Tags</h3>
+            <table id="html-tags", class="table">
+                <tr>
+                    <th>Tag</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><code>&lt;!DOCTYPE html&gt;</code></td>
+                    <td>Defines the document type</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;html&gt;</code></td>
+                    <td>Root element of an HTML page</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;head&gt;</code></td>
+                    <td>Container for metadata</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;body&gt;</code></td>
+                    <td>Container for visible content</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;main&gt;</code></td>
+                    <td>Container for</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;section&gt;</code></td>
+                    <td>Container for sections</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;div&gt;</code></td>
+                    <td>Generic container</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;span&gt;</code></td>
+                    <td>Inline container</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;table&gt;</code></td>
+                    <td>Container for table content</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;tr&gt;</code></td>
+                    <td>Table row</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;th&gt;</code></td>
+                    <td>Table header cell</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;td&gt;</code></td>
+                    <td>Table data cell</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;ul&gt;</code></td>
+                    <td>Unordered list</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;li&gt;</code></td>
+                    <td>List item</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;h1&gt;</code></td>
+                    <td>Heading 1</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;p&gt;</code></td>
+                    <td>Paragraph</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;br&gt;</code></td>
+                    <td>Line break</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;blockquote&gt;</code></td>
+                    <td>Block of quoted text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;cite&gt;</code></td>
+                    <td>Citation</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;code&gt;</code></td>
+                    <td>Inline code</td>
+                </tr>
+            </table>
+            <h3>HTML Tags for Text</h3>
+            <table>
+                <tr>
+                    <td><code>&lt;strong&gt;</code></td>
+                    <td>Bold text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;em&gt;</code></td>
+                    <td>Italic text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;small&gt;</code></td>
+                    <td>Small text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;mark&gt;</code></td>
+                    <td>Highlighted text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;del&gt;</code></td>
+                    <td>Deleted text</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;ins&gt;</code></td>
+                    <td>Inserted text</td>
+                </tr>
+            </table>
+            <h3>HTML Reference Tags</h3>
+            <table>
+                <tr>
+                    <td><code>&lt;a href="url"&gt;</code></td>
+                    <td>Link</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;img src="url" alt="description"&gt;</code></td>
+                    <td>Image</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;button&gt;</code></td>
+                    <td>Button</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;form&gt;</code></td>
+                    <td>Form container</td>
+                </tr>
+            </table>
+            <h4>HTML inputs</h4>
+            <table>
+                <tr>
+                    <td><code>&lt;input type="text"&gt;</code></td>
+                    <td>Text input</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type="email"&gt;</code></td>
+                    <td>Email input</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type="password"&gt;</code></td>
+                    <td>Password input</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type="number"&gt;</code></td>
+                    <td>Number input</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type="date"&gt;</code></td>
+                    <td>Date input</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type="color"&gt;</code></td>
+                    <td>Color input</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type="file"&gt;</code></td>
+                    <td>File input</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type="range"&gt;</code></td>
+                    <td>Range input</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type="submit"&gt;</code></td>
+                    <td>Submit button</td>
+                </tr>
+                <tr>
+                    <td><code>&lt;input type="reset"&gt;</code></td>
+                    <td>Reset button</td>
+                </tr>
+            </table>
+
+            <h2>HTML Entities (&)</h2>
+            <table>
+                <tr>
+                    <td><code>nbsp;</code></td>
+                    <td>Non-breaking space</td>
+                </tr>
+                <tr>
+                    <td><code>amp;</code></td>
+                    <td>HTML entity for &</td>
+                </tr>
+                <tr>
+                    <td><code>lt;</code></td>
+                    <td>HTML entity for &lt;</td>
+                </tr>
+                <tr>
+                    <td><code>gt;</code></td>
+                    <td>HTML entity for &gt;</td>
+                </tr>
+                <tr>
+                    <td><code>quot;</code></td>
+                    <td>HTML entity for "</td>
+                </tr>
+                <tr>
+                    <td><code>#39;</code></td>
+                    <td>HTML entity for '</td>
+                </tr>
+                <tr>
+                    <td><code>copy;</code></td>
+                    <td>HTML entity for ©</td>
+                </tr>
+                <tr>
+                    <td><code>reg;</code></td>
+                    <td>HTML entity for ®</td>
+                </tr>
+                <tr>
+                    <td><code>trade;</code></td>
+                    <td>HTML entity for ™</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="css-section">
+                <h1>CSS Basics</h1>
+                <table>
+                    <h2>CSS Selectors</h2>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Property</th>
+                    </tr>
+                    <tr>
+                        <td><code>.</code></td>
+                        <td>Select class</td>
+                    </tr>
+                    <tr>
+                        <td><code>#</code></td>
+                        <td>Select ID</td>
+                    </tr>
+                    <tr>
+                        <td><code>*</code></td>
+                        <td>Select all elements</td>
+                    </tr>
+                    <tr>
+                        <td><code>element</code></td>
+                        <td>Select specific element</td>
+                    </tr>
+                    <tr>
+                        <td><code>element, element</code></td>
+                        <td>Select multiple elements</td>
+                    </tr>
+                    <tr>
+                        <td><code>element element</code></td>
+                        <td>Select child elements</td>
+                    </tr>
+                </table>
+
+                <h2>CSS Properties</h2>
+                <table>
+                    <tr>
+                        <th>Property</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><code>background-color</code></td>
+                        <td>Sets background color</td>
+                    </tr>
+                    <tr>
+                        <td><code>font-family</code></td>
+                        <td>Sets font family</td>
+                    </tr>
+                    <tr>
+                        <td><code>font-size</code></td>
+                        <td>Sets font size</td>
+                    </tr>
+                    <tr>
+                        <td><code>text-align</code></td>
+                        <td>Aligns text</td>
+                    </tr>
+                    <tr>
+                        <td><code>border</code></td>
+                        <td>Adds border to element</td>
+                    </tr>
+                    <tr>
+                        <td><code>padding</code></td>
+                        <td>Adds padding to element</td>
+                    </tr>
+                    <tr>
+                        <td><code>margin</code></td>
+                        <td>Adds margin to element</td>
+                    </tr>
+                    <tr>
+                        <td><code>display</code></td>
+                        <td>Sets display type</td>
+                    </tr>
+                    <tr>
+                        <td><code>position</code></td>
+                        <td>Sets position type</td>
+                    </tr>
+                    <tr>
+                        <td><code>flex</code></td>
+                        <td>Sets flex properties</td>
+                    </tr>
+                    <tr>
+                        <td><code>grid</code></td>
+                        <td>Sets grid properties</td>
+                    </tr>
+                </table>
+                <h2>CSS Events</h2>
+                <table>
+                    <tr>
+                        <th>Event</th>
+                        <th>Syntax</th>
+                    </tr>
+                    <tr>
+                        <td><code>onclick</code></td>
+                        <td><code>element.onclick = function() {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>onmouseover</code></td>
+                        <td><code>element.onmouseover = function() {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>onmouseout</code></td>
+                        <td><code>element.onmouseout = function() {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>onchange</code></td>
+                        <td><code>element.onchange = function() {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>onfocus</code></td>
+                        <td><code>element.onfocus = function() {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>onblur</code></td>
+                        <td><code>element.onblur = function() {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>onsubmit</code></td>
+                        <td><code>element.onsubmit = function() {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>onload</code></td>
+                        <td><code>window.onload = function() {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>onresize</code></td>
+                        <td><code>window.onresize = function() {}</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>onscroll</code></td>
+                        <td><code>window.onscroll = function() {}</code></td>
+                    </tr>
+                </table>
+
+        </section>
+        <section id="js-section">
+            <h1>Javascript Basics</h1>
+            <ul>
+                <li><code>function greetings() {</code></li>
+                <li><code>const currentDate = new Date();</code></li>
+                <li><code>const currentHour = currentDate.getHours();</code></li>
+                <li><code>if (currentHour >= 4 && currentHour < 12) {</code></li>
+                <li><code>&nbsp;&nbsp;return "Good Morning!";</code></li>
+                <li><code>else if (currentHour >= 12 && currentHour < 17) {</code></li>
+                <li><code>&nbsp;&nbsp;return "Good Afternoon!";</code></li>
+                <li><code>else if (currentHour >= 17 && currentHour < 21){ </code></li>
+                <li><code>&nbsp;&nbsp;return "Good Evening!";</code></li>
+                <li><code>else {</code></li>
+                <li><code>&nbsp;&nbsp;return "Hello World!";</code></li>
+                <li><code>}</code></li>
+            </ul>
+            <h2>Javascript Operators</h2>
+            <table>
+                <tr>
+                    <th>Description</th>
+                    <th>Operator</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td>Addition</td>
+                    <td>+</td>
+                    <td><code>const sum = a + b;</code></td>
+                </tr>
+                <tr>
+                    <td>Subtraction</td>
+                    <td>-</td>
+                    <td><code>const difference = a - b;</code></td>
+                </tr>
+                <tr>
+                    <td>Multiplication</td>
+                    <td>*</td>
+                    <td><code>const product = a * b;</code></td>
+                </tr>
+                <tr>
+                    <td>Division</td>
+                    <td>/</td>
+                    <td><code>const quotient = a / b;</code></td>
+                </tr>
+                <tr>
+                    <td>Modulus</td>
+                    <td>%</td>
+                    <td><code>const remainder = a % b;</code></td>
+                </tr>
+                <tr>
+                    <td>Exponentiation</td>
+                    <td>**</td>
+                    <td><code>const power = a ** b;</code></td>
+                </tr>
+                <tr>
+                    <td>Increment</td>
+                    <td>++</td>
+                    <td><code>a++;</code></td>
+                </tr>
+                <tr>
+                    <td>Decrement</td>
+                    <td>--</td>
+                    <td><code>a--;</code></td>
+                </tr>
+                <tr>
+                    <td>Greater Than</td>
+                    <td>></td>
+                    <td><code>a > b;</code></td>
+                </tr>
+                <tr>
+                    <td>Less Than</td>
+                    <td><</td>
+                    <td><code>a < b;</code></td>
+                </tr>
+                <tr>
+                    <td>Assignment</td>
+                    <td>=</td>
+                    <td><code>a = b;</code></td>
+                </tr>
+                <tr>
+                    <td>Comparison</td>
+                    <td>==</td>
+                    <td><code>a == b;</code></td>
+                </tr>
+                <tr>
+                    <td>Strict Comparison</td>
+                    <td>===</td>
+                    <td><code>a === b;</code></td>
+                </tr>
+                <tr>
+                    <td>Not Equal</td>
+                    <td>!=</td>
+                    <td><code>a != b;</code></td>
+                </tr>
+                <tr>
+                    <td>Greater Than or Equal</td>
+                    <td>&gt;=</td>
+                    <td><code>a >= b;</code></td>
+                </tr>
+                <tr>
+                    <td>Less Than or Equal</td>
+                    <td>&lt;=</td>
+                    <td><code>a <= b;</code></td>
+                </tr>
+                <tr>
+                    <td>Logical AND</td>
+                    <td>&&</td>
+                    <td><code>a && b;</code></td>
+                </tr>
+                <tr>
+                    <td>Logical OR</td>
+                    <td>||</td>
+                    <td><code>a || b;</code></td>
+                </tr>
+                <tr>
+                    <td>Logical NOT</td>
+                    <td>!</td>
+                    <td><code>!a;</code></td>
+                </tr>
+            </table>
+            <h2>Javascript Functions</h2>
+            <table>
+                <tr>
+                    <td>String Concatenation</td>
+                    <td><code>const fullName = firstName + " " + lastName;</code></td>
+                </tr>
+                <tr>
+                    <td>Array Length</td>
+                    <td><code>const length = array.length;</code></td>
+                </tr>
+                <tr>
+                    <td>Array Indexing</td>
+                    <td><code>const firstElement = array[0];</code></td>
+                </tr>
+                <tr>
+                    <td>Object Property Access</td>
+                    <td><code>const value = object.property;</code></td>
+                </tr>
+                <tr>
+                    <td>Function Declaration</td>
+                    <td><code>function myFunction() {}</code></td>
+                </tr>
+                <tr>
+                    <td>Function Call</td>
+                    <td><code>myFunction();</code></td>
+                </tr>
+                <tr>
+                    <td>Array Iteration</td>
+                    <td><code>array.forEach(item => { });</code></td>
+                </tr>
+                <tr>
+                    <td>Object Iteration</td>
+                    <td><code>for (const key in object) { }</code></td>
+                </tr>
+                <tr>
+                    <td>JSON Parsing</td>
+                    <td><code>const obj = JSON.parse(jsonString);</code></td>
+                </tr>
+                <tr>
+                    <td>JSON Stringify</td>
+                    <td><code>const jsonString = JSON.stringify(object);</code></td>
+                </tr>
+                <tr>
+                    <td>Template Literals</td>
+                    <td><code>const message = `Hello, ${name}!`;</code></td>
+                </tr>
+                <tr>
+                    <td>Arrow Functions</td>
+                    <td><code>const add = (a, b) => a + b;</code></td>
+                </tr>
+                <tr>
+                    <td>Spread Operator</td>
+                    <td><code>const newArray = [...array];</code></td>
+                </tr>
+                <tr>
+                    <td>Destructuring Assignment</td>
+                    <td><code>const { property } = object;</code></td>
+                </tr>
+                <tr>
+                    <td>Default Parameters</td>
+                    <td><code>function myFunction(param = defaultValue) {}</code></td>
+                </tr>
+                <tr>
+                    <td>Promises</td>
+                    <td><code>const promise = new Promise((resolve, reject) => { });</code></td>
+                </tr>
+                <tr>
+                    <td>Async/Await</td>
+                    <td><code>async function myFunction() { await promise; }</code></td>
+                </tr>
+                <tr>
+                    <td>Event Handling</td>
+                    <td><code>element.addEventListener("click", function() {});</code></td>
+                </tr>
+                <tr>
+                    <td>Local Storage</td>
+                    <td><code>localStorage.setItem("key", "value");</code></td>
+                </tr>
+                <tr>
+                    <td>Session Storage</td>
+                    <td><code>sessionStorage.setItem("key", "value");</code></td>
+                </tr>
+                <tr>
+                    <td>Fetch API</td>
+                    <td><code>fetch("url").then(response => response.json());</code></td>
+                </tr>
+                <tr>
+                    <td>XMLHttpRequest</td>
+                    <td><code>const xhr = new XMLHttpRequest();</code></td>
+                </tr>
+                <tr>
+                    <td>DOM Manipulation</td>
+                    <td><code>document.getElementById("id").innerHTML = "Text";</code></td>
+                </tr>
+                <tr>
+                    <td>CSS Manipulation</td>
+                    <td><code>document.querySelector(".class").style.color = "red";</code></td>
+                </tr>
+                <tr>
+                    <td>JSON Parsing</td>
+                    <td><code>const obj = JSON.parse(jsonString);</code></td>
+                </tr>
+                <tr>
+                    <td>JSON Stringify</td>
+                    <td><code>const jsonString = JSON.stringify(object);</code></td>
+                </tr>
+                <tr>
+                    <td>Template Literals</td>
+                    <td><code>const message = `Hello, ${name}!`;</code></td>
+                </tr>
+                <tr>
+                    <td>Arrow Functions</td>
+                    <td><code>const add = (a, b) => a + b;</code></td>
+                </tr>
+                <tr>
+            </table>
+            <h2>Javascript Iteration</h2>
+            <table>
+                <tr>
+                    <td>for loop</td>
+                    <td><code>for (let i = 0; i < 10; i++) {}</code></td>
+                </tr>
+                <tr>
+                    <td>while loop</td>
+                    <td><code>while (condition) {}</code></td>
+                </tr>
+                <tr>
+                    <td>do while loop</td>
+                    <td><code>do {} while (condition);</code></td>
+                </tr>
+                <tr>
+                    <td>forEach</td>
+                    <td><code>array.forEach(item => {});</code></td>
+                </tr>
+                <tr>
+                    <td>map</td>
+                    <td><code>const newArray = array.map(item => item * 2);</code></td>
+                </tr>
+                <tr>
+                    <td>filter</td>
+                    <td><code>const filteredArray = array.filter(item => item > 5);</code></td>
+                </tr>
+                <tr>
+                    <td>reduce</td>
+                    <td><code>const sum = array.reduce((acc, item) => acc + item, 0);</code></td>
+                </tr>
+                <tr>
+                    <td>some</td>
+                    <td><code>const hasEven = array.some(item => item % 2 === 0);</code></td>
+                </tr>
+                <tr>
+                    <td>every</td>
+                    <td><code>const allEven = array.every(item => item % 2 === 0);</code></td>
+                </tr>
+                <tr>
+                    <td>find</td>
+                    <td><code>const foundItem = array.find(item => item > 5);</code></td>
+                </tr>
+                <tr>
+                    <td>findIndex</td>
+                    <td><code>const index = array.findIndex(item => item > 5);</code></td>
+                </tr>
+            </table>
+            <h2>Javascript Shorthand</h2>
+            <p>If else statements can be written in shorthand. For example:</p>
+            <ul>
+                <li><code>if(a + b >= 50) {return "Pass";} else {return "Fail";}</code></li>
+            </ul>
+            <p>Can be written as:</p>
+            <ul>
+                <li><code>return a + b >= 50 ? "Pass" : "Fail"</code></li></ul>
+            <h2>Javascript with HTML</h2>
+            <h3>Changing HTML or CSS content with Javascript code</h4>
+            <ul>
+                <li><code>document.getElementById("id").innerHTML = "Text";</code></li>
+                <li><code>document.querySelector(".class").style.color = "red";</code></li>
+            </ul>
+        </section>
+        <section id="uxui-section">
+            <h2>UX/UI Basics</h2>
+            <h4>User Experience</h4>
+            <h4>User Interface</h4>
+            <h4>Design Principles</h4>
+    </main>
+</body>
+</html>
