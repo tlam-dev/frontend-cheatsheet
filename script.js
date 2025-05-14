@@ -13,11 +13,13 @@ document.querySelectorAll(".copy-btn").forEach(btn => {
     });
 });
 
-// Toggle between light and dark mode
+// Load the theme from localStorage
 document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
         document.body.classList.toggle("dark-mode", savedTheme === "dark");
+        document.getElementById("toggle-theme").innerText = savedTheme === "dark" ? "◎ Dark" : "◉ Light";
+        document.getElementById("html-theme").innerText = "\"" + savedTheme + "\"";
     }
 });
 
@@ -29,6 +31,7 @@ function toggleTheme () {
     
     body.classList.toggle("dark-mode");
     document.getElementById("toggle-theme").innerText = newTheme === "dark" ? "◎ Dark" : "◉ Light";
+    document.getElementById("html-theme").innerText = newTheme === "dark" ? "\"dark\"" : "\"light\"";
     localStorage.setItem("theme", newTheme);
 }
 
@@ -43,10 +46,4 @@ function currentTheme() {
     const body = document.body;
     const currentTheme = body.classList.contains("dark-mode") ? "dark" : "light";
     return currentTheme === "dark" ? "◎ Dark" : "◉ Light";
-}
-
-function currentThemeText() {
-    const body = document.body;
-    const currentTheme = body.classList.contains("dark-mode") ? "dark" : "light";
-    return currentTheme === "dark" ? "dark" : "light";
 }

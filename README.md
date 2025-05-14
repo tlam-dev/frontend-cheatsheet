@@ -1,11 +1,12 @@
 # HTML, CSS, Javascript Cheatsheet
 
 ## Description
-A single page HTML/CSS/Javascript/UXUI Cheatsheet that can be viewed on the browser. This is a personal project.
+A single page HTML/CSS/Javascript/UXUI Cheatsheet that can be viewed on the browser. This is a personal project for practicing HTML, CSS and Javascript skills.
 
 ## Table of Contents
 - [Features](#features)
 - [Usage](#usage)
+- [Update History](#update-history)
 - [Update Plans](#update-plans)
 
 ## Features 
@@ -17,11 +18,16 @@ A single page HTML/CSS/Javascript/UXUI Cheatsheet that can be viewed on the brow
 ## Usage
 View it in [GitHub Pages](https://tlam-dev.github.io/frontend-cheatsheet/)
 
-## Update History
+## Update History <a name="update-history"></a>
 ### Version 1.0
+* 1.00
+    * Initial Commit
 * 1.01
     * Made the navigation bar scrollable
     * Added CSS media queries
+* 1.02
+    * Made the initial toggle-theme text and data-theme text in the html code block reflect the current theme
+    * Minor code changes
 
 ## Update Plans <a name="update-plans"></a>
 * Add content to sections

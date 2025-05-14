@@ -288,6 +288,17 @@ th {
     }
 }
 
+.line {
+    font-family: monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(100, end) forwards, blink 0.8s infinite;
+  }
+  
+.typing-container {
+    font-family: monospace;
+}
 
 .dark-mode {
     background-color: rgb(40 40 45);
@@ -437,8 +448,8 @@ th {
 
 /* CSS Animations */
 @keyframes typing {
-    from { height: 0 }
-    to { height: 100% }
+    from { width: 0; }
+    to { witdh: 100%; }
   }
   
 @keyframes blink-caret {
