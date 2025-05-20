@@ -28,6 +28,8 @@ View it in [GitHub Pages](https://tlam-dev.github.io/frontend-cheatsheet/)
 * 1.02
     * Made the initial toggle-theme text and data-theme text in the html code block reflect the current theme
     * Minor code changes
+* 1.03
+    * Updated CSS media for more user-friendly content scaling
 
 ## Update Plans <a name="update-plans"></a>
 * Add content to sections
