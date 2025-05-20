@@ -69,7 +69,6 @@
     table {
         border-collapse: collapse;
         width: auto;
-        min-width: 200px;
         margin: 0px 0px 0px 0px;
     }
     td, th {
@@ -98,6 +97,21 @@
     }
     .typing-container {
         font-size: 12px;
+    }
+}
+@media only screen and (max-width: 500px){
+    table {
+        width: 80%;
+    }
+      td, th {
+        font-size: 12px;
+    }
+    .nav-bar {
+        width: 100%;
+        overflow: auto;
+    }
+    .typing-container {
+        font-size: 10px;
     }
 }
 
@@ -190,7 +204,7 @@ table {
     border-color: var(--font-color);
     border-width: 2px solid;
     width: 100%;
-    min-width: 500px;
+    min-width: 280px;
     margin: 20px 20px 80px 0px;
 }
 
