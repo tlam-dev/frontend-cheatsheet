@@ -52,6 +52,15 @@ function currentTheme() {
 function toggleMenu() {
     const menu = document.getElementById('nav-menu');
     menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+   
+    const currentTheme = body.classList.contains("dark-mode") ? "dark" : "light";
+    const hamburger = document.getElementById('menu-toggle');
+    if (currentTheme === "dark") {
+        hamburger.style.color = (menu.style.display === 'flex') ? 'var(--font-color-black)' : 'var(--bar-color-dark)';
+    }
+    else {
+        hamburger.style.color = (menu.style.display === 'flex') ? 'var(--font-color-white)' : 'var(--bar-color-light)';
+    }
 }
 
 // Responsive nav menu logic

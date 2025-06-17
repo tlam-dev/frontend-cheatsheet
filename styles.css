@@ -100,27 +100,51 @@
         font-size: 12px;
     }
 
-    nav .nav-list{
+    nav.nav-bar {
+        display: flex;
+        flex-wrap: nowrap;
+        box-shadow: none;
+        position: sticky;
+        height: 40px;
+        justify-content: space-between;
+        top: 0px;
+        background: transparent;
+        background-size: cover;
+    }
+
+    nav .nav-list {
+        display: none;
         flex-direction: column;
         position: fixed;
-        top: 0;
+        top: -50px;
         right: 0;
         height: 100%;
-        width: 40%;
+        width: 30%;
         background-color: var(--bar-color-light);
-        padding-top: 20px;
-        padding-bottom: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        overflow: hidden;
+        z-index: 500;
+    }
+
+    .nav-list li {
+        margin-top: 60px;
+        margin-right: 50px;
+        text-align: center;
     }
 
     nav .hamburger-toggle {
         display: block;
         position: fixed;
-        top: 0;
-        right: 10px;
-        color: white;
+        top: 10px;
+        right: 20px;
+        color: #db9978;
         background: none;
         border: none;
         cursor: pointer;
+        font-size: 48px;
+        z-index: 1000;
+        overflow: hidden;
     }
 
     nav .nav-list li {
@@ -129,6 +153,20 @@
 
     .nav-list li a, .toggle-button {
         color: var(--font-color-white);
+    }
+
+    .dark-mode {
+        nav.nav-bar {
+            display: flex;
+            flex-wrap: nowrap;
+            box-shadow: none;
+            position: sticky;
+            height: 40px;
+            justify-content: space-between;
+            top: 0px;
+            background: transparent;
+            background-size: cover;
+        }
     }
 }
 @media only screen and (max-width: 500px){
@@ -315,7 +353,7 @@ th {
 
 .nav-list li a {
     text-decoration: none;
-    color: #eeeeee;
+    color: var(--font-color-white);
     font-size: 18px;
     font-family: var(--default-font-family);
     transition: var(--default-transition);
