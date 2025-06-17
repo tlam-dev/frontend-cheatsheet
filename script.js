@@ -47,3 +47,19 @@ function currentTheme() {
     const currentTheme = body.classList.contains("dark-mode") ? "dark" : "light";
     return currentTheme === "dark" ? "◎ Dark" : "◉ Light";
 }
+
+// For mobile view
+function toggleMenu() {
+    const menu = document.getElementById('nav-menu');
+    menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+}
+
+// Responsive nav menu logic
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        document.getElementById('nav-menu').style.display = 'flex';
+    }
+    else if (window.innerWidth <= 768) {
+         document.getElementById('nav-menu').style.display = 'none';
+    }
+});

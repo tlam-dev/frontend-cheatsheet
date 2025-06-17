@@ -59,7 +59,7 @@
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
     h1 {
         font-size: 24px;
     }
@@ -78,6 +78,7 @@
     section {
         margin: 0px 0px;
     }
+
     #html-section {
         margin: 0px 2% 0px 2%;
         position: center;
@@ -98,6 +99,37 @@
     .typing-container {
         font-size: 12px;
     }
+
+    nav .nav-list{
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 40%;
+        background-color: var(--bar-color-light);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    nav .hamburger-toggle {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 10px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    nav .nav-list li {
+        text-align: center;
+    }
+
+    .nav-list li a, .toggle-button {
+        color: var(--font-color-white);
+    }
 }
 @media only screen and (max-width: 500px){
     table {
@@ -105,10 +137,6 @@
     }
       td, th {
         font-size: 12px;
-    }
-    .nav-bar {
-        width: 100%;
-        overflow: auto;
     }
     .typing-container {
         font-size: 10px;
@@ -269,10 +297,11 @@ th {
 }
 
 .nav-list {
-    display: flex;
-    list-style: none;
-    overflow: auto;
-    white-space: nowrap;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .nav-list li {
@@ -295,7 +324,10 @@ th {
 
 .nav-list li a:hover {
     color: #ffd700;
-    /* Change the color on hover */
+}
+
+.hamburger-toggle {
+  display: none;
 }
 
 .toggle-button {
@@ -367,7 +399,7 @@ th {
         box-shadow: 0px 0px 3px 0px var(--shade-color-light);
     }
     .nav-list {
-        background-color: transparent;
+        background-color: var(--bar-color-dark);;
         li{
             background-color: transparent;
             color: #eeeeee;

@@ -30,6 +30,8 @@ View it in [GitHub Pages](https://tlam-dev.github.io/frontend-cheatsheet/)
     * Minor code changes
 * 1.03
     * Updated CSS media for more user-friendly content scaling
+* 1.04
+    * Updated navigation bar: hamburger menu for mobile view
 
 ## Update Plans <a name="update-plans"></a>
 * Add content to sections
